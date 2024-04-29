@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dise Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 class="top_heading">Dice Game</h1>
+
+    <div class="container">
+
+        <div class="parent">
+            <div class="box" onclick=" userInput(1)"><i class="fa-solid fa-dice-one"></i></div>
+            <div class="box" onclick=" userInput(2)"><i class="fa-solid fa-dice-two"></i></div>
+            <div class="box" onclick=" userInput(3)"><i class="fa-solid fa-dice-three"></i></div>
+            <div class="box" onclick=" userInput(4)"><i class="fa-solid fa-dice-four"></i></div>
+            <div class="box" onclick=" userInput(5)"><i class="fa-solid fa-dice-five"></i></div>
+            <div class="box" onclick=" userInput(6)"><i class="fa-solid fa-dice-six"></i></div>
+        </div>
+
+        <div class="parent">
+            <div class="box2" id="userValue">10</div>
+            <div > <b style="font-size: 60px;">=</b></div>
+            <div class="box2" id="randomValue">10</div>
+        </div>
+        
+        <div style="text-align: center;">
+            <span style="font-size: 50px; ">User Value:</span>
+            <span style="font-size: 50px; margin-left: 40px;">Random Value:</span>
+        </div>
+
+        <div class="parent">
+            <div class="box3" id="win_count">Win </div>
+            <div > <b style="font-size: 60px;">=</b></div>
+            <div class="box3 box4" id="loss_count">Loss </div>
+        </div>
+
+       <div class="box_win" id="result"></div>
+       <div class="box2 box_counter" id="counter">10</div>
+       <span class="counter_heading">Counter</span>
+
+    </div>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
