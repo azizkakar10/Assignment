@@ -1,3 +1,6 @@
+body{
+    background-color: rgb(240, 168, 168);
+}
 .top_heading{
     text-align: center;
     font-size: 50px;
@@ -21,6 +24,10 @@
     width: 80px;
     background-color: red;
     border-radius: 10px;
+}
+.box:hover{
+    transform: scale(1.2);
+    transition: 0.2s;
 }
 .box > i {
     font-size: 85px;
@@ -62,12 +69,13 @@
 position: absolute;
 top: 5px;
 right: 2px;
-border: 5px solid orange;
+border: 8px solid  rgb(65, 14, 207);
+color: black;
 }
 .counter_heading{
     position: absolute;
-top: 130px;
+top: 135px;
 right: 5px;
 font-size: 40px;
-color: orange;
+color: rgb(65, 14, 207);
 }
