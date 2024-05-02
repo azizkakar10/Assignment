@@ -1,0 +1,129 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    background-image: url(analog-clock-bg.jpg);
+    background-position: 0%;
+}
+.clock{
+    height: 500px;
+    width: 500px;
+    position: relative;
+    background-color: lightgrey;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 30px solid rgb(11, 163, 171);
+}
+.number{
+    transform: rotate(calc(30deg * var(--n)));
+    position: absolute;
+    text-align: center;
+    inset: 20px;
+    font-size: 40px;
+}
+.number b {
+    transform: rotate(calc(-30deg * var(--n)));
+    display: inline-block;
+}
+.center_dot{
+    position: absolute;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: gray  ;
+}
+.date{
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border: 5px outset black;
+    font-size: 40px;
+    text-align: center;
+    bottom: 100px;
+    font-weight: 700;
+}
+
+.hour_wraper{
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    position: absolute;
+}
+.hour_hand{
+    position: relative;
+}
+.hour_hand .hand{
+height: 130px;
+width: 11px;
+background-color: black;
+position: absolute;
+left: 219px;
+top: 95px;
+}
+.hour_hand .arrow{
+height: 25px;
+width: 25px;
+border-radius: 50%;
+background-color: black;
+position: absolute;
+left: 212px;
+top: 115px;
+}
+
+.minute_wraper{
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    position: absolute;
+}
+.minute_hand{
+    position: relative;
+}
+.minute_hand .hand{
+height: 180px;
+width: 8px;
+background-color: black;
+position: absolute;
+left: 221px;
+top: 45px;
+}
+.minute_hand .arrow{
+height: 20px;
+width: 20px;
+border-radius: 50%;
+background-color: black;
+position: absolute;
+left: 215px;
+top: 60px;
+}
+
+
+.second_wraper{
+    height: 450px;
+    width: 450px;
+    border-radius: 50%;
+    position: absolute;
+}
+.second_hand{
+    position: relative;
+}
+.second_hand .hand{
+height: 220px;
+width: 5px;
+background-color: red;
+position: absolute;
+left: 221px;
+top: 7px;
+}
+.second_hand .arrow{
+height: 15px;
+width: 15px;
+border-radius: 50%;
+background-color: red;
+position: absolute;
+left: 216px;
+top: 25px;
+}

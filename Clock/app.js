@@ -11,23 +11,25 @@ var year = document.getElementById("year")
 
 setInterval( function(){
     var date = new Date();
+    h = date.getHours();
+    m = date.getMinutes();
+    s = date.getSeconds();
     
-    hours.innerText = date.getHours();
-    if (hours.innerText <= 12){
-        am_pm.innerText = "AM";
-    }else{
-        hours.innerText = date.getHours() - 12;
-        am_pm.innerText = "PM";
+    if(h > 12){
+        h = h - 12;
     }
+    if ( h >= 12){
+        am_pm.innerText = "PM"
+    }
+    h = h < 10 ? "0"+h : h ;
+    hours.innerText = h;
+
+    m = m < 10 ? "0"+m : m ;
+    minutes.innerText = m;
+
+    s = s < 10 ? "0"+s : s ;
+    seconds.innerText = s;
     
-    minutes.innerText = date.getMinutes();
-if (minutes.innerText < 10) {
-    minutes.innerText = "0"+date.getMinutes()
-}
-    seconds.innerText = date.getSeconds();
-    if (seconds.innerText < 10) {
-        seconds.innerText = "0"+date.getSeconds()
-    }
 
     day.innerText = days[date.getDay()];
 
