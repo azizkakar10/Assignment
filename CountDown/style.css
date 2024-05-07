@@ -17,6 +17,7 @@ h1{
     width: 70vh;
     height: 30vh;
     border: 10px solid aqua;
+    border-radius: 30px;
     box-shadow: 0px 0px 30px aquamarine;
     display: flex;
     align-items: center;
