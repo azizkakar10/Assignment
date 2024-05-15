@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Finance App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Finance App</h1>
+
+    <div class="container">
+        <div class="parent">
+            <div class="balance">
+                <p class="balance_num" id="balance_num">0</p>
+                <p id="balance_hed">Balance</p>
+            </div>
+            </div>
+            
+
+        <div class="parent parent1">
+            <div class="box">
+                <p class="box_num"class="box_num" id="income_num">00</p>
+                <p class="box_hed" id="income_hed">Income</p>
+            </div>
+            <div class="box box1">
+                <p class="box_num" id="expance_num">00</p>
+                <p class="box_hed" id="expance_hed">Expance</p>
+            </div>
+        </div>
+
+        <div class="parent">
+            <div >
+               <div class="user_input_box">
+                <input type="number" id="user_input">
+            </div>
+
+            <div class="btn_box">
+                <button onclick="income()" id="income_btn">Income</button>
+                <button onclick="expance()" id="expance_btn">Expance</button>
+            </div>
+        </div> 
+            </div>
+            
+
+<h1>Transaction History</h1>
+
+        <div class="parent">
+            <div>
+                <table border="5" cellspacing='10' cellpadding='6' bgcolor ="white">
+                <tr>
+                    <th>Transaction Type</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Balance</th>
+                </tr>
+
+                <tr>
+                    <td id="trns_type">Income</td>
+                    <td id="date">00/00/0000</td>
+                    <td id="time">00:00:00</td>
+                    <td id="trans_blnce">00</td>
+                </tr>
+            </table>
+            </div>
+            
+        </div>
+
+    </div>
+
+
+    <script src="app.js"></script>
+</body>
+</html>
