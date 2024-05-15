@@ -73,7 +73,7 @@ button{
     box-shadow: 0px 0px 10px white;
     text-shadow: 2px 2px 5px black;
 }
-@media (max-width:1200px){
+@media (max-width:700px){
     .parent{
         display: flex;
         justify-content:center ;
