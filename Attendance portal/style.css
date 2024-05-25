@@ -1,0 +1,26 @@
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+}
+tr, td, th{
+    border: 1px solid black;
+    width: 100px;
+    padding: 5px;
+    text-align: center;
+}
+.parent{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 50%;
+}
+.parent span{
+    border: 11px solid black;
+    padding: 5px;
+    margin: 10px auto;
+    width: 100px;
+}
+button{
+    border: 0;
+    background: transparent;
+}
