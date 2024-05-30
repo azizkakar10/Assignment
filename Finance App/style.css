@@ -6,6 +6,21 @@ h1{
     color: white;
     background-color: rgba(0, 0, 0, 0.1);
 }
+table{
+    border: 2px solid black;
+    border-collapse: collapse;
+    background-color: white;
+}
+tr, td, th{
+    border: 1px solid black;
+    width: 120px;
+    padding: 5px;
+    text-align: center;
+}
+th{
+    background-color: gray;
+    color: white;
+}
 .parent{
     display: flex;
     align-items: center;

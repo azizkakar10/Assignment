@@ -10,15 +10,14 @@ var balance_hed = document.getElementById("balance_hed")
 var user_input = document.getElementById("user_input")
 
 var trns_type = document.getElementById("trns_type")
-var date = document.getElementById("date")
-var time = document.getElementById("time")
-var trans_blnce = document.getElementById("trans_blnce")
+
+var transaction = document.getElementById("transaction")
 
 
 
 var balance = 0;
 var expances = 0;
-var now = new Date();
+var no = 1;
 
 
 
@@ -33,12 +32,17 @@ function income(){
         balance_hed.style.color = "red"
     }
     if(user_input.value){
-        trns_type.innerText = "Income"
-    trns_type.style.color = "green"
-    trns_type.style.backgroundColor = "lime"
-    date.innerText = now.getDate()+"/"+now.getMonth()+"/"+now.getFullYear();
-    time.innerText = now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();
-    trans_blnce.innerText = user_input.value;
+        var now = new Date();
+        date = now.getDate()+"/"+now.getMonth()+"/"+now.getFullYear();
+        time = now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();
+        transaction.innerHTML += `
+        <tr>
+    <td>${no++}</td>
+    <td style="background-color: lime; color: white;">Income</td>
+    <td >${date}</td>
+    <td>${time}</td>
+    <td>${user_input.value}</td>
+</tr>`
 }
     user_input.value = "";
 }
@@ -55,12 +59,17 @@ function expance(){
         balance_hed.style.color = "red"
     }
     if(user_input.value){
-        trns_type.innerText = "Expance"
-    trns_type.style.color = "red"
-    trns_type.style.backgroundColor = "pink"
-    date.innerText = now.getDate()+"/"+now.getMonth()+"/"+now.getFullYear();
-    time.innerText = now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();
-    trans_blnce.innerText = user_input.value;
+        var now = new Date();
+        date = now.getDate()+"/"+now.getMonth()+"/"+now.getFullYear();
+        time = now.getHours()+":"+now.getMinutes()+":"+now.getSeconds();
+        transaction.innerHTML += `
+        <tr>
+    <td>${no++}</td>
+    <td style="background-color: red; color: white;">Income</td>
+    <td >${date}</td>
+    <td>${time}</td>
+    <td>${user_input.value}</td>
+</tr>`
 }
     user_input.value = "";
 }

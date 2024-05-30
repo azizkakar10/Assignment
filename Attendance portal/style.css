@@ -8,19 +8,24 @@ tr, td, th{
     padding: 5px;
     text-align: center;
 }
+
 .parent{
+    width: 70%;
     display: flex;
-    align-items: center;
     justify-content: space-around;
-    width: 50%;
+    align-items: center;
+    margin-bottom: 20px;
 }
-.parent span{
-    border: 11px solid black;
-    padding: 5px;
-    margin: 10px auto;
-    width: 100px;
+.parent div {
+    border: 2px inset black;
+    width: 200px;
 }
-button{
-    border: 0;
-    background: transparent;
+.parent div p{
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 5px 0px 5px 0px !important;
+}
+.number{
+    font-size: 50px !important;
 }

@@ -192,47 +192,42 @@ var leave_num = 0;
     <td>${users[i].age}</td>
     <td>${users[i].rollNo}</td>
     <td>${users[i].class}</td>
-    <td> <button onclick="pre(this)"><i class="fa-regular fa-square-check"></i></button></td>
-    <td> <button onclick="abs(this)"><i class="fa-regular fa-square-check"></i></button></td>
-    <td> <button onclick="lea(this)"><i class="fa-regular fa-square-check"></i></button></td>
+    <td> <label><input onchange="pre(this)" type="radio" name="${i}" value="present"></label></td>
+    <td> <label><input onchange="abs(this)" type="radio" name="${i}" value="absent"></label></td>
+    <td> <label><input onchange="lea(this)" type="radio" name="${i}" value="leave"></label></td>
 </tr>`
     
   }
 
   function pre(element){
-    if(element.firstElementChild.className === "fa-solid fa-square-check"){
-        element.innerHTML = '<i class="fa-regular fa-square-check"></i>'
-        present_num--;
+    console.log(element.value);
+    if(element.value === "present"){
+        present_num++;
         present.innerText = present_num;
     }else{
-        element.innerHTML = '<i class="fa-solid fa-square-check"></i>'
-        present_num++;
+        present_num--;
         present.innerText = present_num;
 
     }
     
   }
   function abs(element){
-    if(element.firstElementChild.className === "fa-solid fa-square-check"){
-        element.innerHTML = '<i class="fa-regular fa-square-check"></i>'
-        absent_num--;
-        absent.innerText = absent_num;
+   if(element.value === "absent"){
+    absent_num++;
+    absent.innerText = absent_num;
     }else{
-        element.innerHTML = '<i class="fa-solid fa-square-check"></i>'
-        absent_num++;
-        absent.innerText = absent_num;
+      absent_num--;
+      absent.innerText = absent_num;
 
     }
   }
   function lea(element){
-    if(element.firstElementChild.className === "fa-solid fa-square-check"){
-        element.innerHTML = '<i class="fa-regular fa-square-check"></i>'
+    if(element.value === "leave"){
+      leave_num++;
+      leave.innerText = leave_num;
+      }else{
         leave_num--;
         leave.innerText = leave_num;
-    }else{
-        element.innerHTML = '<i class="fa-solid fa-square-check"></i>'
-        leave_num++;
-        leave.innerText = leave_num;
-
-    }
+  
+      }
   }
