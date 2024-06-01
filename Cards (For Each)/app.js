@@ -93,7 +93,9 @@ var fruits = [
 ]
 
 var list = document.getElementById("list")
-fruits.forEach(function(data , ind){
+function showData(){
+  list.innerHTML = ""
+  fruits.forEach(function(data , ind){
     // console.log("index-->",ind , "data-->", data);
     var ele = `<div class="lg:w-1/3  sm:w-1/2 p-4">
     <div class="flex relative h-[250px]">
@@ -116,6 +118,9 @@ fruits.forEach(function(data , ind){
   </div>`;
   list.innerHTML += ele
 })
+}
+showData();
+
 
 function updateDesc(ele){
     console.log("ele-->", ele.previousElementSibling);
@@ -124,60 +129,12 @@ function updateDesc(ele){
     var index = ele.parentElement.id;
     fruits[index].desc = prompt("Discription")
     console.log("fruits-->", fruits);
-    list.innerHTML = ""
-    
-    fruits.forEach(function(data , ind){
-        // console.log("index-->",ind , "data-->", data);
-        var ele = `<div class="lg:w-1/3  sm:w-1/2 p-4">
-        <div class="flex relative h-[250px]">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="${
-            data.image
-          }">
-          <div id = ${ind} class="px-8 py-10  relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 class="tracking-widest text-xl title-font font-medium text-indigo-500 mb-1">${
-              data.name
-            }</h2>
-            <h1 class="title-font text-2xl font-medium text-gray-900 mb-3">${
-              data.title
-            }</h1>
-            <p class="leading-relaxed">${data.types.join(" , ")}</p>
-            <p class="leading-relaxed">${data.desc} </p>
-            <button onclick="updateDesc(this)" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Update</button>
-        <button onclick="del(this)" class="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Delete</button>
-          </div>
-        </div>
-      </div>`;
-      list.innerHTML += ele
-    })
+    showData();
 }
 
 function del(ele){
     var index = ele.parentElement.id;
     fruits.splice(index,1)
     console.log(fruits);
-    list.innerHTML = ""
-    
-    fruits.forEach(function(data , ind){
-        // console.log("index-->",ind , "data-->", data);
-        var ele = `<div class="lg:w-1/3  sm:w-1/2 p-4">
-        <div class="flex relative h-[250px]">
-          <img alt="gallery" class="absolute inset-0 w-full h-full object-cover object-center" src="${
-            data.image
-          }">
-          <div id = ${ind} class="px-8 py-10  relative z-10 w-full border-4 border-gray-200 bg-white opacity-0 hover:opacity-100">
-            <h2 class="tracking-widest text-xl title-font font-medium text-indigo-500 mb-1">${
-              data.name
-            }</h2>
-            <h1 class="title-font text-2xl font-medium text-gray-900 mb-3">${
-              data.title
-            }</h1>
-            <p class="leading-relaxed">${data.types.join(" , ")}</p>
-            <p class="leading-relaxed">${data.desc} </p>
-            <button onclick="updateDesc(this)" class="text-white bg-gradient-to-r from-cyan-500 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-cyan-300 dark:focus:ring-cyan-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Update</button>
-        <button onclick="del(this)" class="text-white bg-gradient-to-br from-pink-500 to-orange-400 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-pink-200 dark:focus:ring-pink-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2">Delete</button>
-          </div>
-        </div>
-      </div>`;
-      list.innerHTML += ele
-    })
+    showData();
 }
