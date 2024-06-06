@@ -5,7 +5,7 @@ var list = document.getElementById("list")
 
     function add_data(){
         list.innerHTML +=
-    `<li>
+    `<li class="items">
           <span>${user_input.value}</span>
         <button onclick="edit(this)">Edit</button>
         <button onclick="del(this)">Del</button>

@@ -1,0 +1,32 @@
+
+h1{
+    text-align: center;
+}
+.main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.container{
+    border: 2px solid black;
+    border-radius: 20px;
+    padding: 20px;
+}
+.upper{
+    padding: 10px;
+}
+.lower{
+    padding: 10px;
+}
+.items{
+    border: 1px inset grey;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 2px;
+}
+.list{
+    background-color: lightgrey;
+    border-radius: 20px;
+    
+}
